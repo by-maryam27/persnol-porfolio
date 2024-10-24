@@ -1,0 +1,33 @@
+// components/Footer.js
+import React from "react";
+import styles from "../footer.module.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { faGithub, faLinkedin, faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+config.autoAddCss = false;
+
+const Footer = () => {
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.socialIcons}>
+          <a href="https://github.com/by-maryam27" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+          </a>
+          <a href="https://www.linkedin.com/in/maryam-raza-990481301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
+          </a>
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faDiscord} className={styles.icon} />
+          </a>
+        </div>
+      </div>
+      <div className={styles.bottom}>
+        <p>© 2024 Maryam Raza. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

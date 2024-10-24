@@ -1,0 +1,84 @@
+.herocontainer {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.heroimage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+.heroimage img {
+  width: 100%; /* Ensures image scales correctly */
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and fit the container */
+  display: block;
+}
+
+.heroimage:hover {
+  transform: scale(1.05);
+}
+
+.skills {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #626a6f;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+  font-family: serif;
+}
+
+.heading1 {
+  color: #333333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .heroimage {
+    width: 180px; /* Width for tablets */
+    height: 180px;
+  }
+
+  .skills {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .heading1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroimage {
+    width: 150px; /* Width for mobile devices */
+    height: 150px;
+  }
+
+  .skills {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .heading1 {
+    font-size: 24px;
+  }
+}
